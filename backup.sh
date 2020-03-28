@@ -251,7 +251,7 @@ echo "    BACKUP TOWARDS  ${remote}"
 for f in ${folders} ; do
   printf "  >>> Uploading folder: $f ..."
   if [ -d "$f" ] ; then
-    rsync ${arg} /home/$u/$f/ $v@${remote}:/volume1/homes/$v/$f/
+    rsync ${arg} /home/$u/$f/ $v@${remote}:/home/$v/backup
     printf " Done.\n"
   else
     printf " Folder does not exist on local machine, skipping.\n"
